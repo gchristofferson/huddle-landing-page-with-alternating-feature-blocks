@@ -1,0 +1,237 @@
+/* ================================
+CSS RESETS AND DEFAULTS
+================================ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+
+/* ================================
+UTILITIES
+================================ */
+
+.container {
+    padding: 0 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 24px;
+}
+
+.flex_reverse {
+    flex-direction: row-reverse;
+}
+
+.flex_start {
+    align-items: start;
+}
+
+.flex_col {
+    flex-direction: column;
+}
+
+
+
+/* ================================
+COLORS
+================================ */
+
+:root {
+    /* Primary */
+    --pink: hsl(322, 100%, 66%);
+
+    /* Neutral */
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+}
+
+
+
+
+/* ================================
+TYPOGRAPHY
+================================ */
+
+/* Set core body defaults also */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--very-dark-cyan);
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+.hero__text {
+    font-size: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 0.625rem;
+}
+
+.hero__btn {
+    font-size: 0.75rem;
+}
+
+.footer__cta-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.copyright {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6875rem;
+}
+
+
+
+/* ================================
+BUTTONS
+================================ */
+
+.btn {
+    border-radius: 20px;
+    background-color: var(--pink);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn_primary {
+    box-shadow: 2px 3px 6px 1px rgba(255, 82, 193, 0.166185);
+    padding: 10px 59px 14px 60px;
+}
+
+.btn_primary_big {
+    box-shadow: 0 3px 7px rgba(0, 37, 46, 0.223053);
+    padding: 13px 49px 13px 50px;
+}
+
+.btn_secondary {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.0954201);
+    border-radius: 12px;
+    background-color: #fff;
+    color: inherit;
+    padding: 4px 22px 6px 23px;
+}
+
+
+
+/* ================================
+GENERAL LAYOUT
+================================ */
+
+/* Header and Hero sections */
+
+.hero {
+    background-image: url("../images/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    background-color: var(--very-pale-cyan);
+}
+
+.header__container {
+    padding: 27px 16px 0 16px;
+    margin-bottom: 80px;
+}
+
+.hero__content {
+    row-gap: 56px;
+    padding-bottom: 37px;
+}
+
+.logo {
+    max-width: 104px;
+}
+
+.hero__container {
+    padding: 0 35px;
+}
+
+.hero__title {
+    margin-bottom: 24px;
+}
+
+.hero__text {
+    margin-bottom: 39px;
+}
+
+.hero__img {
+    margin: 0 4px;
+}
