@@ -118,13 +118,14 @@ body {
     font-size: 0.875rem;
     line-height: 1.5;
     text-align: center;
-    color: var(--very-dark-cyan);
+    color: var(--grayish-blue);
 }
 
 h1,
 h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    color: var(--very-dark-cyan);
 }
 
 h1 {
@@ -137,6 +138,7 @@ h2 {
 
 .hero__text {
     font-size: 1rem;
+    color: var(--very-dark-cyan);
 }
 
 .btn {
@@ -157,6 +159,25 @@ h2 {
 .copyright {
     font-family: 'Poppins', sans-serif;
     font-size: 0.6875rem;
+}
+
+@media (min-width: 1297px) {
+    body {
+        font-size: 1.125rem;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero__text {
+        font-size: 1.125rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
 }
 
 
@@ -186,8 +207,23 @@ BUTTONS
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.0954201);
     border-radius: 12px;
     background-color: #fff;
-    color: inherit;
+    color: var(--very-dark-cyan);
     padding: 4px 22px 6px 23px;
+}
+
+@media (min-width: 1297px) {
+    .btn {
+        border-radius: 28px;
+    }
+
+    .btn_primary {
+        padding: 17px 69px 20px 70px;
+    }
+
+    .btn_secondary {
+        border-radius: 24px;
+        padding: 13px 63px 16px 65px;
+    }
 }
 
 
@@ -211,9 +247,9 @@ GENERAL LAYOUT
     margin-bottom: 80px;
 }
 
-.hero__content {
-    row-gap: 56px;
-    padding-bottom: 37px;
+.header__content {
+    max-width: 1270px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -224,6 +260,18 @@ GENERAL LAYOUT
     padding: 0 35px;
 }
 
+.hero__content {
+    row-gap: 56px;
+    padding-bottom: 37px;
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.hero__copy {
+    flex: 0 1 536px;
+}
+
 .hero__title {
     margin-bottom: 24px;
 }
@@ -232,6 +280,35 @@ GENERAL LAYOUT
     margin-bottom: 39px;
 }
 
-.hero__img {
+.hero__img-container {
     margin: 0 4px;
+    flex: 0 1 680px;
+}
+
+@media (min-width: 1297px) {
+    .hero {
+        background-image: url("../images/bg-hero-desktop.svg");
+    }
+
+    .header__container {
+        padding: 48px 80px 0 80px;
+        margin-bottom: 71px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .hero__content {
+        justify-content: space-between;
+        padding-bottom: 72px;
+    }
+
+    .hero__title {
+        margin-bottom: 32px;
+    }
+
+    .hero__text {
+        margin: 0 16px 44px 0;
+    }
 }
