@@ -182,6 +182,15 @@ h2 {
     .btn {
         font-size: 0.875rem;
     }
+
+    .footer__cta-text {
+        font-size: 2rem;
+        line-height: 1.87;
+    }
+
+    .btn_primary_big {
+        font-size: 1.25rem;
+    }
 }
 
 
@@ -195,6 +204,10 @@ BUTTONS
     background-color: var(--pink);
     color: #fff;
     text-decoration: none;
+}
+
+.btn:hover, .btn:focus {
+    opacity: 0.5;
 }
 
 .btn_primary {
@@ -215,6 +228,10 @@ BUTTONS
     padding: 4px 22px 6px 23px;
 }
 
+.header__btn:hover, .header__btn:focus {
+    opacity: 0.7;
+}
+
 @media (min-width: 1297px) {
     .btn {
         border-radius: 28px;
@@ -222,6 +239,11 @@ BUTTONS
 
     .btn_primary {
         padding: 17px 69px 20px 70px;
+    }
+
+    .btn_primary_big {
+        padding: 25px 99px 25px 100px;
+        border-radius: 40px;
     }
 
     .btn_secondary {
@@ -417,8 +439,29 @@ section[aria-labelledby="features__title_3"] {
 
 /* Footer Section */
 
-aside {
-    display: none;
+.footer__cta-container {
+    position: relative;
+    padding: 0 12px;
+    height: 0;
+}
+
+.footer__cta {
+    background-color: #fff;
+    color: var(--very-dark-cyan);
+    position: relative;
+    margin: 0 auto;
+    top: -109px;
+    right: 0;
+    left: 0;
+    max-width: 800px;
+    min-height: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.0710768);
+    border-radius: 15px;
+    row-gap: 24px;
 }
 .footer,
 .footer a {
@@ -426,10 +469,15 @@ aside {
     text-decoration: none;
 }
 
+.footer a:hover:not(.footer__cta a), .footer a:focus:not(.footer__cta a),
+.fab:hover, .fab:focus {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+
 .footer {
     background-color: var(--very-dark-cyan);
     text-align: left;
-    position: relative;
 }
 
 .footer__container {
@@ -528,6 +576,10 @@ aside {
 }
 
 @media (min-width: 979px) {
+    .footer__cta {
+        min-height: 280px;
+        top: -184px;
+    }
     .footer__container {
         padding: 144px 78px 64px 78px;
     }
