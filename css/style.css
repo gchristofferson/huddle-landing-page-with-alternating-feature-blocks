@@ -204,6 +204,7 @@ BUTTONS
     background-color: var(--pink);
     color: #fff;
     text-decoration: none;
+    transition: opacity 150ms;
 }
 
 .btn:hover, .btn:focus {
@@ -473,9 +474,16 @@ section[aria-labelledby="features__title_3"] {
     text-decoration: none;
 }
 
-.footer a:hover:not(.footer__cta a), .footer a:focus:not(.footer__cta a),
+.footer__icon-container a:hover, .footer__icon-container a:focus,
+.footer__link:hover, .footer__link:focus {
+    text-decoration: underline;
+}
+
 .fab:hover, .fab:focus {
     color: var(--pink);
+}
+
+.footer__social-icon:hover, .footer__social-icon:focus {
     border-color: var(--pink);
 }
 
