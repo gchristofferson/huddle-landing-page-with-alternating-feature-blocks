@@ -432,6 +432,10 @@ section[aria-labelledby="features__title_3"] {
         padding: 0;
     }
 
+    section[aria-labelledby="features__title_3"] {
+        margin-bottom: 344px;
+    }
+
 }
 
 
